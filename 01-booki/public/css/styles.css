@@ -33,12 +33,63 @@ body {
 }
 
 header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 30px;
 
+  .header_logo {
+    display: block;
+    margin: 30px 50px;
+    @media screen and (max-width: 768px) {
+      text-align: center;
+    }
+  }
+
+  nav {
+    display: flex;
+
+    a {
+      color: var(--base-text-color);
+      text-decoration: none;
+      padding: 15px 0;
+      margin: 0 20px;
+      border-top: 2px solid transparent;
+
+      transition: all 0.2s;
+
+      &:hover {
+        color: var(--main-color);
+        border-top: 2px solid var(--main-color);
+      }
+
+      @media screen and (max-width: 768px) {
+        text-align: center;
+        flex-grow: 1;
+        margin: 0;
+        border-bottom: 2px solid var(--filter-bg-color);
+        border-top: 0;
+
+        &:hover {
+          border-bottom: 2px solid var(--main-color);
+          border-top: 0;
+        }
+      }
+    }
+
+    @media screen and (max-width: 768px) {
+      
+    }
+
+    
+  }
+
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+  }
 }
 
 main {
   flex-grow: 1;
-
 }
 
 footer {
